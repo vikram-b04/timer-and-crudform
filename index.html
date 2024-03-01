@@ -1,0 +1,912 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hotel booking</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="shortcut icon" href="./images/logo1.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+  emailjs.init({
+    publicKey: "zXnG9DXYmNNpdufBC",
+  });
+})();
+</script>  
+<!--jquery cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- aos cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- header -->
+  <header id="home">
+    <nav class="navbar navbar-expand-lg bg-white">
+      <div class="container-fluid">
+        <a class="headerlogo navbar-brand ms-lg-5 " href="#"><img src="./images/logo.png" alt="" class="w-75"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto fw-medium fs-5">
+            <li class="nav-item">
+              <a class="nav-link pe-5 text-black" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pe-5 text-black" href="#AboutUs">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pe-5 text-black" href="#Offers">Offers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pe-5 text-black" href="#Rooms">Rooms</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pe-5 text-black" href="#Testimonials">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pe-5 text-black" href="#Contact">Contact</a>
+            </li>
+          </ul>
+          <button class="btn btn-lg fw-semibold rounded-1 pe-4 ps-4 me-5 fs-5 mt-lg-0 mt-3 pt-2 pb-2" type="submit">Book
+            Now</button>
+        </div>
+      </div>
+    </nav>
+
+
+    <!-- herosection -->
+    <div class="bgcolorhero pb-5">
+      <div class="container pb-4">
+        <div class="row justify-content-between herosection">
+          <div
+            class="col-lg-5 col-md-12 col-12 order-1 order-lg-1 d-flex align-items-lg-center text-lg-start text-center">
+            <div class="herosec-text ">
+              <h1 class="fw-bold  mt-4">Hotels.com, That is the Latest Dimension on Luxury</h1>
+              <p class=" fs-5 mt-4 fw-light">The hotel and resort business is one of the best and loyal business in the
+                global market. We are the agency that helps to book you a good room in a suitable palace at a reasonable
+                price.</p>
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-12 col-12 order-2 order-lg-2 text-center">
+            <div class="herosec-pic">
+              <img src="./images/herosec.jpg" alt="" class="img-fluid mt-5 mb-5 rounded-4">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- booking form -->
+    <div class="container bg-white booking" data-aos="flip-down">
+      <div class="bookingform">
+        <div class="row pt-5 pb-5">
+          <div class="col-lg mb-3 mb-lg-0 ms-lg-4">
+            <label class="fw-semibold mb-4">Check in</label>
+            <input type="date" class="form-control rounded-5" id="checkin">
+          </div>
+          <div class="col-lg mb-3 mb-lg-0">
+            <label class="fw-semibold mb-4">Check Out</label>
+            <input type="date" class="form-control rounded-5" id="checkout">
+          </div>
+          <div class="col-lg mb-3 mb-lg-0">
+            <label class="fw-semibold mb-4">Guest</label>
+            <select name="" id="guest" class="form-select rounded-5">
+              <option value="1 Guest">1 Guest</option>
+              <option value="2 Guest">2 Guest</option>
+              <option value="3 Guest">3 Guest</option>
+              <option value="4 Guest">4 Guest</option>
+              <option value="5 Guest">5 Guest</option>
+            </select>
+          </div>
+          <div class="col-lg mb-3 mb-lg-0">
+            <label class="fw-semibold mb-4">Room</label>
+            <select name="" id="room" class="form-select rounded-5">
+              <option value="1 Room">1 Room</option>
+              <option value="2 Room">2 Room</option>
+              <option value="3 Room">3 Room</option>
+              <option value="4 Room">4 Room</option>
+              <option value="5 Room">5 Room</option>
+            </select>
+          </div>
+          <div class="col-lg-2 mb-3 mb-lg-0 mt-5 text-center">
+            <button class="btn btn-lg fw-semibold rounded-5 pe-4 ps-4 fs-5" id="booknow" type="submit">Book Now</button>
+          </div>
+        </div>
+      </div>
+      <div id="datasaving">
+        <button class="closebtn bg-white mt-4 ms-3"><i class="icon fa-solid fa-xmark"></i></button>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- about us -->
+  <section id="AboutUs">
+    <div class="container">
+      <h3 class="fw-semibold mt-5 text-center text-danger">About Us</h3>
+      <div class="row justify-content-evenly">
+        <div class="col-lg-5 col-md-12 col-12" data-aos="fade-up">
+          <div class="ourteam-pic">
+            <img src="./images/about us pic.jpg" alt=""
+              class="img-fluid mt-5 mb-5 col-lg-11 col-12 col-md-12 rounded-3">
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-12 col-12 d-flex align-items-center text-lg-start text-center text-md-start" data-aos="fade-down">
+          <div class="ourteam-text">
+            <h2 class="fw-semibold fs-2 text-md-center text-lg-start ">We Are More Than 20+ Global Exp. And We Have a
+              Lots of Reasons Into The Choose Us From Other</h2>
+            <p class="col-lg-11 fs-5 mt-4 text-md-center text-lg-start">Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. Vestibulum tristique augue quis neque ornare fermentum. In sit amet mattis diam. Sed id
+              aliquam nulla. In porttitor et turpis non pretium.</p>
+            <div class="text-center text-lg-start">
+              <button class="btn btn-lg fw-semibold rounded-1 pe-4 ps-4 fs-5 mt-lg-3 mt-3 pt-2 pb-2" type="submit">Book
+                Now</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- offers -->
+  <section id="Offers">
+    <div class="container">
+      <div class="bg-danger mt-5 rounded-2 pt-3 pb-3" data-aos="zoom-in-up">
+        <div class="d-flex justify-content-center d-flex align-items-center d-flex flex-column">
+          <div class="offer mt-3">
+            <h2 class="fw-semibold text-white">Today Special Offers</h2>
+          </div>
+          <div class="timmer mt-3">
+            <div class="d-flex gap-4">
+              <div class="box text-center">
+                <h2 class="fw-semibold text-white" id="days">00</h2>
+                <small class="text-white">Days</small>
+              </div>
+
+              <div class="box text-center">
+                <h2 class="fw-semibold text-white" id="hours">00</h2>
+                <small class="text-white">Hours</small>
+              </div>
+
+              <div class="box text-center">
+                <h2 class="fw-semibold text-white" id="minutes">00</h2>
+                <small class="text-white">Minutes</small>
+              </div>
+
+              <div class="box text-center">
+                <h2 class="fw-semibold text-white" id="seconds">00</h2>
+                <small class="text-white">Seconds</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <h4 class="fw-medium mt-5 text-center text-danger">What We Offer</h4>
+      <div class="row mt-5">
+        <div class="col-lg-4">
+          <div class="card" data-aos="fade-left">
+            <img src="./images/single room.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title mt-2 fw-semibold">Single Room</h5>
+              <p class="card-text mt-3">You can easily reserve a hotel room with a double bed as you want. This will
+                give you a very good feeling.</p>
+              <div class="border-bottom border-danger"></div>
+              <div class="d-flex mt-4">
+                <div class="price">
+                  <h5 class=" mt-lg-2 mt-1"><span class="text-danger">$200</span>/Per Night</h5>
+                </div>
+                <div class="ms-auto">
+                  <a href="#" class="btn btn-lg fw-semibold rounded-5 pe-4 ps-4 fs-5">Book Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card mt-lg-0 mt-5" data-aos="fade-left">
+            <img src="./images/double rrom.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title mt-2 fw-semibold">Double Room</h5>
+              <p class="card-text mt-3">You can easily reserve a hotel room with a double bed as you want. This will
+                give you a very good feeling.</p>
+              <div class="border-bottom border-danger"></div>
+              <div class="d-flex mt-4">
+                <div class="price">
+                  <h5 class=" mt-lg-2 mt-1"><span class="text-danger">$250</span>/Per Night</h5>
+                </div>
+                <div class="ms-auto">
+                  <a href="#" class="btn btn-lg fw-semibold rounded-5 pe-4 ps-4 fs-5">Book Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card mt-lg-0 mt-5" data-aos="fade-left">
+            <img src="./images/family room.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title mt-2 fw-semibold">Family Room</h5>
+              <p class="card-text mt-3">You can easily reserve a hotel room with a double bed as you want. This will
+                give you a very good feeling.</p>
+              <div class="border-bottom border-danger"></div>
+              <div class="d-flex mt-4">
+                <div class="price">
+                  <h5 class="mt-lg-2 mt-1"><span class="text-danger">$320</span>/Per Night</h5>
+                </div>
+                <div class="ms-auto">
+                  <a href="#" class="btn btn-lg fw-semibold rounded-5 pe-4 ps-4 fs-5">Book Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- services -->
+  <section id="Services">
+    <div class="container">
+      <h3 class="fw-semibold mt-5 text-center text-danger">Services</h3>
+      <div class="row mt-5" data-aos="flip-up">
+        <div class="col-lg-4 col-md-6 mt-lg-0 mt-md-0">
+          <div class="item border rounded-2 text-center pt-4 pb-4 ps-4 pe-4">
+            <div class="icon">
+              <i class="fa-solid fa-wifi"></i>
+            </div>
+            <h5 class="pt-3 fw-semibold">Wifi Coverage</h5>
+            <p class="pt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt ante tellus, sit amet
+              rhoncus massa .</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mt-lg-0 mt-md-0 mt-5">
+          <div class="item border rounded-2 text-center pt-4 pb-4 ps-4 pe-4">
+            <div class="icon">
+              <i class="fa-solid fa-person-swimming"></i>
+            </div>
+            <h5 class="pt-3 fw-semibold">Pool & Spa</h5>
+            <p class="pt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt ante tellus, sit amet
+              rhoncus massa .</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mt-lg-0 mt-md-5 mt-5">
+          <div class="item border rounded-2 text-center pt-4 pb-4 ps-4 pe-4">
+            <div class="icon">
+              <i class="fa-solid fa-utensils"></i>
+            </div>
+            <h5 class="pt-3 fw-semibold">Buffet Breakfast</h5>
+            <p class="pt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt ante tellus, sit amet
+              rhoncus massa .</p>
+          </div>
+        </div>
+      </div>  
+      <div class="row mt-5" data-aos="flip-up">
+        <div class="col-lg-4 col-md-6 mt-5">
+          <div class="item border rounded-2 text-center pt-4 pb-4 ps-4 pe-4">
+            <div class="icon">
+              <i class="fa-solid fa-champagne-glasses"></i>
+            </div>
+            <h5 class="pt-3 fw-semibold">Luxury Bars</h5>
+            <p class="pt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt ante tellus, sit amet
+              rhoncus massa .</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mt-5">
+          <div class="item border rounded-2 text-center pt-4 pb-4 ps-4 pe-4">
+            <div class="icon">
+              <i class="fa-solid fa-broom"></i>
+            </div>
+            <h5 class="pt-3 fw-semibold">Cleaning Everyday</h5>
+            <p class="pt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt ante tellus, sit amet
+              rhoncus massa .</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mt-5">
+          <div class="item border rounded-2 text-center pt-4 pb-4 ps-4 pe-4">
+            <div class="icon">
+              <i class="fa-solid fa-umbrella-beach"></i>
+            </div>
+            <h5 class="pt-3 fw-semibold">Sea View Beach</h5>
+            <p class="pt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt ante tellus, sit amet
+              rhoncus massa .</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+
+  <!-- rooms -->
+  <section id="Rooms">
+    <div class="container">
+      <h3 class="fw-semibold mt-5 text-center text-danger">Rooms</h3>
+
+      <!-- ROOMS SEARCH -->
+      <div class="roomsearch">
+        <div class="text-center mt-5">
+          <form action="" class="d-flex justify-content-center">
+           <div data-aos="fade-right">
+            <select name=""
+            class="searchbox btn1 bg-danger text-white btn-lg fw-semibold rounded-1 pe-4 ps-4 me-5 fs-5 mt-lg-0 pt-2 pb-2">
+            <option value="hotel">Hotel</option>
+
+            <option value="room">Room</option>
+          </select>
+           </div>
+            <div data-aos="fade-left">
+              <button class="searchbtn btn btn-lg fw-semibold rounded-1 pe-4 ps-4 fs-5 mt-lg-0 pt-2 pb-2">Search</button>
+            </div>
+          </form>
+        </div>
+        <div class="search-results mt-5" data-aos="zoom-in-left">
+          <div class="search-result">
+              <img
+                src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="" alt="Gold chandelier on white hotel">
+              <div class="">
+                <a href="https://unsplash.com/photos/gold-chandelier-on-white-ceiling-ym_EI-DTS1g" target="_blank"
+                  class="">Gold chandelier on white hotel</a>
+              </div>
+          </div>
+          <div class="search-result">
+              <img
+                src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="" alt="Swimming pool daytime">
+              <div class="">
+                <a href="https://unsplash.com/photos/person-in-swimming-pool-during-daytime-rlwE8f8anOc" target="_blank"
+                  class="">Swimming pool daytime</a>
+              </div>
+          </div>
+          <div class="search-result">
+              <img
+                src="https://images.unsplash.com/photo-1517840901100-8179e982acb7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="" alt="Low angle hotel">
+              <div class="">
+                <a href="https://unsplash.com/photos/low-angle-photo-of-hotel-lighted-signage-on-top-of-brown-building-during-nighttime-n_IKQDCyrG0" target="_blank"
+                  class="">Low angle hotel</a>
+              </div>
+          </div>
+        </div>
+          <button id="showmorebtn" class="btn btn-lg fw-semibold rounded-1 pe-4 ps-4 fs-5 pt-2 pb-2">Show
+            more </button>
+
+      </div>
+      <div class="row mt-5" data-aos="fade-up">
+        <div class="col-lg-4">
+          <div class="card">
+            <img src="./images/single room.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title mt-2 fw-semibold">Single Room</h5>
+              <p class="card-text mt-3">You can easily reserve a hotel room with a double bed as you want. This will
+                give you a very good feeling.</p>
+              <div class="border-bottom border-danger"></div>
+              <div class="d-flex mt-4">
+                <div class="price">
+                  <h5 class=" mt-lg-2 mt-1"><span class="text-danger">$200</span>/Per Night</h5>
+                </div>
+                <div class="ms-auto">
+                  <a href="#" class="btn btn-lg fw-semibold rounded-5 pe-4 ps-4 fs-5">Book Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card mt-lg-0 mt-5">
+            <img src="./images/double rrom.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title mt-2 fw-semibold">Double Room</h5>
+              <p class="card-text mt-3">You can easily reserve a hotel room with a double bed as you want. This will
+                give you a very good feeling.</p>
+              <div class="border-bottom border-danger"></div>
+              <div class="d-flex mt-4">
+                <div class="price">
+                  <h5 class=" mt-lg-2 mt-1"><span class="text-danger">$250</span>/Per Night</h5>
+                </div>
+                <div class="ms-auto">
+                  <a href="#" class="btn btn-lg fw-semibold rounded-5 pe-4 ps-4 fs-5">Book Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card mt-lg-0 mt-5">
+            <img src="./images/family room.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title mt-2 fw-semibold">Family Room</h5>
+              <p class="card-text mt-3">You can easily reserve a hotel room with a double bed as you want. This will
+                give you a very good feeling.</p>
+              <div class="border-bottom border-danger"></div>
+              <div class="d-flex mt-4">
+                <div class="price">
+                  <h5 class="mt-lg-2 mt-1"><span class="text-danger">$320</span>/Per Night</h5>
+                </div>
+                <div class="ms-auto">
+                  <a href="#" class="btn btn-lg fw-semibold rounded-5 pe-4 ps-4 fs-5">Book Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5" data-aos="fade-up">
+        <div class="col-lg-4">
+          <div class="card">
+            <img src="./images/single room.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title mt-2 fw-semibold">Luxury Room</h5>
+              <p class="card-text mt-3">You can easily reserve a hotel room with a double bed as you want. This will
+                give you a very good feeling.</p>
+              <div class="border-bottom border-danger"></div>
+              <div class="d-flex mt-4">
+                <div class="price">
+                  <h5 class=" mt-lg-2 mt-1"><span class="text-danger">$200</span>/Per Night</h5>
+                </div>
+                <div class="ms-auto">
+                  <a href="#" class="btn btn-lg fw-semibold rounded-5 pe-4 ps-4 fs-5">Book Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card mt-lg-0 mt-5">
+            <img src="./images/double rrom.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title mt-2 fw-semibold">Deluxe Room</h5>
+              <p class="card-text mt-3">You can easily reserve a hotel room with a double bed as you want. This will
+                give you a very good feeling.</p>
+              <div class="border-bottom border-danger"></div>
+              <div class="d-flex mt-4">
+                <div class="price">
+                  <h5 class=" mt-lg-2 mt-1"><span class="text-danger">$250</span>/Per Night</h5>
+                </div>
+                <div class="ms-auto">
+                  <a href="#" class="btn btn-lg fw-semibold rounded-5 pe-4 ps-4 fs-5">Book Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card mt-lg-0 mt-5">
+            <img src="./images/family room.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title mt-2 fw-semibold">Presedential Room</h5>
+              <p class="card-text mt-3">You can easily reserve a hotel room with a double bed as you want. This will
+                give you a very good feeling.</p>
+              <div class="border-bottom border-danger"></div>
+              <div class="d-flex mt-4">
+                <div class="price">
+                  <h5 class="mt-lg-2 mt-1"><span class="text-danger">$320</span>/Per Night</h5>
+                </div>
+                <div class="ms-auto">
+                  <a href="#" class="btn btn-lg fw-semibold rounded-5 pe-4 ps-4 fs-5">Book Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Testimonials -->
+  <section id="Testimonials">
+    <h3 class="fw-semibold mt-5 text-center text-danger">Testimonials</h3>
+    <div class="container bg-danger mt-5" data-aos="fade-up"
+    data-aos-anchor-placement="top-center">
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row d-flex align-items-lg-center text-center text-lg-start">
+              <div class=" col-lg-3">
+                <div class="testimonailpic">
+                  <img src="./images/testimonial-1.jpg" class=" ms-lg-5 mt-5 mb-5" alt="...">
+                </div>
+              </div>
+              <div class="col-lg-7 ">
+                <div class="content">
+                  <h4 class="text-white">David Beckham</h4>
+                  <p class="text-white">UX Designer</p>
+                  <p class="text-white pt-3">Proin massa augue, lacinia at blandit ac, fringilla scelerisque tortor.
+                    Mauris sit amet lectus porta, porta lectus non, malesuada neque. Integer in tempus leo. Quisque
+                    vitae leo ac ex suscipit iaculis eu in nisl. Donec vestibulum volutpat lectus, vel aliquet massa
+                    porttitor in. Integer eleifend</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row d-flex align-items-center text-center text-lg-start">
+              <div class=" col-lg-3">
+                <div class="testimonailpic">
+                  <img src="./images/testimonial-2.jpg" class=" ms-lg-5 mt-5 mb-5" alt="...">
+                </div>
+              </div>
+              <div class="col-lg-7 ">
+                <div class="content">
+                  <h4 class="text-white">Harriet Johnson</h4>
+                  <p class="text-white">UX Designer</p>
+                  <p class="text-white pt-3">Proin massa augue, lacinia at blandit ac, fringilla scelerisque tortor.
+                    Mauris sit amet lectus porta, porta lectus non, malesuada neque. Integer in tempus leo. Quisque
+                    vitae leo ac ex suscipit iaculis eu in nisl. Donec vestibulum volutpat lectus, vel aliquet massa
+                    porttitor in. Integer eleifend</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row d-flex align-items-center text-center text-lg-start">
+              <div class=" col-lg-3">
+                <div class="testimonailpic">
+                  <img src="./images/testimonial-3.jpg" class=" ms-lg-5 mt-5 mb-5" alt="...">
+                </div>
+              </div>
+              <div class="col-lg-7 ">
+                <div class="content">
+                  <h4 class="text-white">David Fincher</h4>
+                  <p class="text-white">UX Designer</p>
+                  <p class="text-white pt-3">Proin massa augue, lacinia at blandit ac, fringilla scelerisque tortor.
+                    Mauris sit amet lectus porta, porta lectus non, malesuada neque. Integer in tempus leo. Quisque
+                    vitae leo ac ex suscipit iaculis eu in nisl. Donec vestibulum volutpat lectus, vel aliquet massa
+                    porttitor in. Integer eleifend</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="Contact">
+    <div class="container">
+      <h3 class="fw-semibold mt-5 text-center text-danger">Contact</h3>
+
+      <div class="row mt-5">
+        <div class="col-lg-6" data-aos="fade-up-right">
+          <div class="row needs-validation" novalidate>
+            <div class=" col-lg-11">
+              <input type="text" class="form-control mt-lg-4 mt-3" id="from_name" value="" placeholder="Name" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+          </div>
+          <div class="row needs-validation" novalidate>
+            <div class="col-lg-11">
+              <input type="text" class="form-control mt-lg-4 mt-3" id="phone_number" value=""
+                placeholder="Phone Number" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+          </div>
+          <div class="row needs-validation" novalidate>
+            <div class="col-lg-11">
+              <input type="email" class="form-control mt-lg-4 mt-3" id="email" value=""
+                placeholder="Email Address" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+          </div>
+          <div class="row needs-validation" novalidate>
+            <div class="col-lg-11">
+              <input type="email" class="form-control mt-lg-4 mt-3 ot-5 pb-5" id="message" value=""
+                placeholder="Message" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+          </div>
+          <div class="send mt-lg-4 mt-3 text-lg-start text-center">
+            <button class="btn btn-lg fw-semibold rounded-1 pe-4 ps-4 me-lg-5 fs-5" type="submit" id="sendbtn">Send</button>
+          </div>
+        </div>
+        <div class="col-lg-4 map mt-lg-0 mt-4" data-aos="fade-up-left">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15545.80443846095!2d80.26557369999999!3d13.0705718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1707428813367!5m2!1sen!2sin"
+            width="630" height="365" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- footer -->
+  <section class="bgfooter mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6">
+          <div class="leftcontent">
+            <div class="footerlogo">
+              <a href="#"><img src="./images/logo.png" class="mt-5" alt=""></a>
+            </div>
+            <div class="abouthotel">
+              <p class="text-white mt-4">Aenean finibus convallis nisl sit amet hendrerit. Etiam blandit velit non lorem
+                mattis, non ultrices eros bibendum .</p>
+            </div>
+            <div class="d-flex mt-4">
+              <div class="footericon">
+                <i class="fa-solid fa-house"></i>
+              </div>
+              <div class="adress">
+                <p class="text-white ms-3">123 Stanton, New York, USA</p>
+              </div>
+            </div>
+            <div class="d-flex">
+              <div class="footericon">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="number">
+                <p class="text-white ms-3">+1 (123) 456 7890</p>
+              </div>
+            </div>
+            <div class="d-flex">
+              <div class="footericon">
+                <i class="fa-regular fa-envelope"></i>
+              </div>
+              <div class="mail">
+                <p class="text-white ms-3">Hotels@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 mt-2 col-md-6">
+          <div class="linkscontent">
+            <ul class="links">
+              <a href="" class="text-decoration-none">
+                <li class="list-group-item fw-semibold fs-4 mt-lg-5 mt-md-5 mt-3 text-white">Links</li>
+              </a>
+              <div class="d-flex mt-3">
+                <div class="footericon mt-3 ms-1">
+                  <i class="fa-solid fa-caret-right"></i>
+                </div>
+                <div class="linkscontent">
+                  <a href="" class="text-decoration-none">
+                    <li class="list-group-item mt-3 ms-3 text-white ">About Us</li>
+                  </a>
+                </div>
+              </div>
+              <div class="d-flex">
+                <div class="footericon mt-3 ms-1">
+                  <i class="fa-solid fa-caret-right"></i>
+                </div>
+                <div class="linkscontent">
+                  <a href="" class="text-decoration-none">
+                    <li class="list-group-item mt-3 ms-3 text-white ">Services</li>
+                  </a>
+                </div>
+              </div>
+              <div class="d-flex">
+                <div class="footericon mt-3 ms-1">
+                  <i class="fa-solid fa-caret-right"></i>
+                </div>
+                <div class="linkscontent">
+                  <a href="" class="text-decoration-none">
+                    <li class="list-group-item mt-3 ms-3 text-white ">Team</li>
+                  </a>
+                </div>
+              </div>
+              <div class="d-flex">
+                <div class="footericon mt-3 ms-1">
+                  <i class="fa-solid fa-caret-right"></i>
+                </div>
+                <div class="linkscontent">
+                  <a href="" class="text-decoration-none">
+                    <li class="list-group-item mt-3 ms-3 text-white ">Gallery</li>
+                  </a>
+                </div>
+              </div>
+              <div class="d-flex">
+                <div class="footericon mt-3 ms-1">
+                  <i class="fa-solid fa-caret-right"></i>
+                </div>
+                <div class="linkscontent">
+                  <a href="" class="text-decoration-none">
+                    <li class="list-group-item mt-3 ms-3 text-white ">Terms</li>
+                  </a>
+                </div>
+              </div>
+              <div class="d-flex">
+                <div class="footericon mt-3 ms-1">
+                  <i class="fa-solid fa-caret-right"></i>
+                </div>
+                <div class="linkscontent">
+                  <a href="" class="text-decoration-none">
+                    <li class="list-group-item mt-3 ms-3 text-white ">Privacy Policy</li>
+                  </a>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-3 mt-2 col-md-6">
+          <div class="usefulcontent">
+            <ul class="usefull">
+              <a href="" class="text-decoration-none">
+                <li class="list-group-item fw-semibold fs-4 mt-lg-5 mt-md-5 mt-3 text-white">Useful Links</li>
+              </a>
+              <div class="d-flex mt-3">
+                <div class="footericon mt-3 ms-1">
+                  <i class="fa-solid fa-caret-right"></i>
+                </div>
+                <div class="linkscontent">
+                  <a href="" class="text-decoration-none">
+                    <li class="list-group-item mt-3 ms-3 text-white ">Home</li>
+                  </a>
+                </div>
+              </div>
+              <div class="d-flex">
+                <div class="footericon mt-3 ms-1">
+                  <i class="fa-solid fa-caret-right"></i>
+                </div>
+                <div class="linkscontent">
+                  <a href="" class="text-decoration-none">
+                    <li class="list-group-item mt-3 ms-3 text-white ">About Us</li>
+                  </a>
+                </div>
+              </div>
+              <div class="d-flex">
+                <div class="footericon mt-3 ms-1">
+                  <i class="fa-solid fa-caret-right"></i>
+                </div>
+                <div class="linkscontent">
+                  <a href="" class="text-decoration-none">
+                    <li class="list-group-item mt-3 ms-3 text-white ">Offers</li>
+                  </a>
+                </div>
+              </div>
+              <div class="d-flex">
+                <div class="footericon mt-3 ms-1">
+                  <i class="fa-solid fa-caret-right"></i>
+                </div>
+                <div class="linkscontent">
+                  <a href="" class="text-decoration-none">
+                    <li class="list-group-item mt-3 ms-3 text-white ">Services</li>
+                  </a>
+                </div>
+              </div>
+              <div class="d-flex">
+                <div class="footericon mt-3 ms-1">
+                  <i class="fa-solid fa-caret-right"></i>
+                </div>
+                <div class="linkscontent">
+                  <a href="" class="text-decoration-none">
+                    <li class="list-group-item mt-3 ms-3 text-white ">Rooms</li>
+                  </a>
+                </div>
+              </div>
+              <div class="d-flex">
+                <div class="footericon mt-3 ms-1">
+                  <i class="fa-solid fa-caret-right"></i>
+                </div>
+                <div class="linkscontent">
+                  <a href="" class="text-decoration-none">
+                    <li class="list-group-item mt-3 ms-3 text-white ">Contact</li>
+                  </a>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-3 mt-lg-2 mt-md-1 col-md-6">
+          <div class="newscontent mt-lg-5 mt-md-5 mt-3">
+            <div class="newsletter">
+              <h5 class="text-white fw-semibold fs-4">Newsletter</h5>
+            </div>
+            <div class="newscontent mt-4">
+              <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempor eget ante
+                fringilla rutrum aenean sed venenatis .</p>
+            </div>
+            <form class="row needs-validation" novalidate>
+              <div class="col-lg-11 col-md-11 mt-3 col-12 ">
+                <input type="email" class="form-control rounded-5 pt-2 pb-2 ps-3" id="exampleFormControlInput1" value=""
+                  placeholder="Your Email" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+            </form>
+            <div class="send mt-lg-4 mt-4">
+              <button
+                class="btn btn-lg fw-semibold text-center col-lg-11 col-md-11 col-12 me-lg-5 fs-5 rounded-5 pt-2 pb-2"
+                type="submit">Subscribe Now</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="border border-bottom border-danger mt-5"></div>
+      <div class="row">
+        <div class=" col-lg-9 col-md-8">
+          <p class="text-white mt-3 text-lg-start text-md-start text-center">Copyright @2024 Hotels. All Rights Reserved
+            by Vikram</p>
+        </div>
+        <div class="col-lg-2 mt-1 col-md-3 ms-md-5">
+          <div class="d-flex justify-content-center">
+            <div class="facebook">
+              <i class="fa-brands fa-square-facebook"></i>
+            </div>
+            <div class="insta ms-3">
+              <i class="fa-brands fa-square-instagram"></i>
+            </div>
+            <div class="twitter ms-3">
+              <i class="fa-brands fa-square-x-twitter"></i>
+            </div>
+            <div class="youtube ms-3">
+              <i class="fa-brands fa-square-youtube"></i>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+    <script src="./crudform.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
+
+</body>
+
+</html>
