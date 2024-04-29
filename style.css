@@ -14090,24 +14090,16 @@ fieldset:disabled .btn {
     }
 
     .newdivcss{
-        display: block;
-    }
-
-    .editbutton{
-        margin-left: 18px;
-    }
-
-    .updatebutton{
-        margin-left: 20px;
-    }
-
-    .deletebutton{
-        margin-left: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 
     .inputtag{
         margin-bottom: 15px;
-    }
+        width: 400px;
+    } 
 }
 
 @media (min-width: 700px) and (max-width: 850px) {
@@ -14116,19 +14108,14 @@ fieldset:disabled .btn {
     }
 
     .newdivcss{
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 
-    .editbutton{
-        margin-top: 15px;
-        margin-left: 30px;
-    }
-
-    .updatebutton{
-        margin-left: 20px;
-    }
-
-    .deletebutton{
-        margin-left: 20px;
-    }
+    .inputtag{
+        margin-bottom: 15px;
+        width: 700px;
+    } 
 }
