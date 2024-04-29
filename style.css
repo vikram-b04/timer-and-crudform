@@ -14088,10 +14088,47 @@ fieldset:disabled .btn {
     .map iframe {
         width: 370px;
     }
+
+    .newdivcss{
+        display: block;
+    }
+
+    .editbutton{
+        margin-left: 18px;
+    }
+
+    .updatebutton{
+        margin-left: 20px;
+    }
+
+    .deletebutton{
+        margin-left: 20px;
+    }
+
+    .inputtag{
+        margin-bottom: 15px;
+    }
 }
 
 @media (min-width: 700px) and (max-width: 850px) {
     .map iframe {
         width: 700px;
+    }
+
+    .newdivcss{
+        display: block;
+    }
+
+    .editbutton{
+        margin-top: 15px;
+        margin-left: 30px;
+    }
+
+    .updatebutton{
+        margin-left: 20px;
+    }
+
+    .deletebutton{
+        margin-left: 20px;
     }
 }
