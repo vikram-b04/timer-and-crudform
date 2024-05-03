@@ -40,7 +40,7 @@ booknow.addEventListener("click",()=>{
     // guest
     if(guest.value == "1 Guest"){
 
-        let newtaginputguest = document.createElement("select");
+        var newtaginputguest = document.createElement("select");
         let newtaginputguestoption1 = document.createElement("option");
         newtaginputguestoption1.innerHTML= "1 Guest"
         newtaginputguest.appendChild(newtaginputguestoption1);
@@ -58,8 +58,10 @@ booknow.addEventListener("click",()=>{
         newtaginputguest.appendChild(newtaginputguestoption5);
         newdiv.appendChild(newtaginputguest);
         newtaginputguest.classList.add("inputtag");
+        newtaginputguest.setAttribute("disabled","disabled"); 
+
     }else if(guest.value == "2 Guest"){
-        let newtaginputguest = document.createElement("select");
+        var newtaginputguest = document.createElement("select");
         let newtaginputguestoption2 = document.createElement("option");
         newtaginputguestoption2.innerHTML= "2 Guest"
         newtaginputguest.appendChild(newtaginputguestoption2);
@@ -77,8 +79,10 @@ booknow.addEventListener("click",()=>{
         newtaginputguest.appendChild(newtaginputguestoption5);
         newdiv.appendChild(newtaginputguest);
         newtaginputguest.classList.add("inputtag");
+        newtaginputguest.setAttribute("disabled","disabled"); 
+
     }else if(guest.value == "3 Guest"){
-        let newtaginputguest = document.createElement("select");
+        var newtaginputguest = document.createElement("select");
         let newtaginputguestoption3 = document.createElement("option");
         newtaginputguestoption3.innerHTML= "3 Guest"
         newtaginputguest.appendChild(newtaginputguestoption3);
@@ -96,8 +100,10 @@ booknow.addEventListener("click",()=>{
         newtaginputguest.appendChild(newtaginputguestoption5);
         newdiv.appendChild(newtaginputguest);
         newtaginputguest.classList.add("inputtag");
+        newtaginputguest.setAttribute("disabled","disabled"); 
+ 
     }else if(guest.value == "4 Guest"){
-        let newtaginputguest = document.createElement("select");
+        var newtaginputguest = document.createElement("select");
         let newtaginputguestoption4 = document.createElement("option");
         newtaginputguestoption4.innerHTML= "4 Guest"
         newtaginputguest.appendChild(newtaginputguestoption4);
@@ -115,9 +121,11 @@ booknow.addEventListener("click",()=>{
         newtaginputguest.appendChild(newtaginputguestoption5);
         newdiv.appendChild(newtaginputguest);
         newtaginputguest.classList.add("inputtag");
+        newtaginputguest.setAttribute("disabled","disabled"); 
+ 
     }
     else if(guest.value == "5 Guest"){
-        let newtaginputguest = document.createElement("select");
+        var newtaginputguest = document.createElement("select");
         let newtaginputguestoption5 = document.createElement("option");
         newtaginputguestoption5.innerHTML= "5 Guest"
         newtaginputguest.appendChild(newtaginputguestoption5);
@@ -135,12 +143,13 @@ booknow.addEventListener("click",()=>{
         newtaginputguest.appendChild(newtaginputguestoption4);
         newdiv.appendChild(newtaginputguest);
         newtaginputguest.classList.add("inputtag");
+        newtaginputguest.setAttribute("disabled","disabled"); 
     }
 
 
     // room
     if (room.value == "1 Room") {
-        let newtaginputroom = document.createElement("select");
+        var newtaginputroom = document.createElement("select");
         let newtaginputroomoption1 = document.createElement("option");
         newtaginputroomoption1.innerHTML= "1 Room"
         newtaginputroom.appendChild(newtaginputroomoption1);
@@ -158,8 +167,9 @@ booknow.addEventListener("click",()=>{
         newtaginputroom.appendChild(newtaginputroomoption5);
         newdiv.appendChild(newtaginputroom);
         newtaginputroom.classList.add("inputtag");
+        newtaginputroom.setAttribute("disabled","disabled");
     }else if(room.value == "2 Room"){
-        let newtaginputroom = document.createElement("select");
+        var newtaginputroom = document.createElement("select");
         let newtaginputroomoption2 = document.createElement("option");
         newtaginputroomoption2.innerHTML= "2 Room"
         newtaginputroom.appendChild(newtaginputroomoption2);
@@ -177,9 +187,11 @@ booknow.addEventListener("click",()=>{
         newtaginputroom.appendChild(newtaginputroomoption5);
         newdiv.appendChild(newtaginputroom);
         newtaginputroom.classList.add("inputtag");
+        newtaginputroom.setAttribute("disabled","disabled");
+
 
     }else if(room.value == "3 Room"){
-        let newtaginputroom = document.createElement("select");
+        var newtaginputroom = document.createElement("select");
         let newtaginputroomoption3 = document.createElement("option");
         newtaginputroomoption3.innerHTML= "3 Room"
         newtaginputroom.appendChild(newtaginputroomoption3);
@@ -197,9 +209,11 @@ booknow.addEventListener("click",()=>{
         newtaginputroom.appendChild(newtaginputroomoption5);
         newdiv.appendChild(newtaginputroom);
         newtaginputroom.classList.add("inputtag");
+        newtaginputroom.setAttribute("disabled","disabled");
+
 
     }else if(room.value == "4 Room"){
-        let newtaginputroom = document.createElement("select");
+        var newtaginputroom = document.createElement("select");
         let newtaginputroomoption4 = document.createElement("option");
         newtaginputroomoption4.innerHTML= "4 Room"
         newtaginputroom.appendChild(newtaginputroomoption4);
@@ -217,9 +231,11 @@ booknow.addEventListener("click",()=>{
         newtaginputroom.appendChild(newtaginputroomoption5);
         newdiv.appendChild(newtaginputroom);
         newtaginputroom.classList.add("inputtag");
+        newtaginputroom.setAttribute("disabled","disabled");
+
 
     }else if(room.value == "5 Room"){
-        let newtaginputroom = document.createElement("select");
+        var newtaginputroom = document.createElement("select");
         let newtaginputroomoption5 = document.createElement("option");
         newtaginputroomoption5.innerHTML= "5 Room"
         newtaginputroom.appendChild(newtaginputroomoption5);
@@ -237,6 +253,8 @@ booknow.addEventListener("click",()=>{
         newtaginputroom.appendChild(newtaginputroomoption4);
         newdiv.appendChild(newtaginputroom);
         newtaginputroom.classList.add("inputtag");
+        newtaginputroom.setAttribute("disabled","disabled");
+
 
     }
 
@@ -249,8 +267,8 @@ booknow.addEventListener("click",()=>{
     editbtn.addEventListener("click",()=>{
         newtaginputcheckin.removeAttribute("readonly","readonly"); 
         newtaginputcheckout.removeAttribute("readonly","readonly"); 
-        newtaginputguest.removeAttribute("readonly","readonly"); 
-        newtaginputroom.removeAttribute("readonly","readonly"); 
+        newtaginputguest.removeAttribute("disabled","disabled");
+        newtaginputroom.removeAttribute("disabled","disabled"); 
         
     })
 
@@ -262,8 +280,8 @@ booknow.addEventListener("click",()=>{
     updatebtn.addEventListener("click",()=>{
         newtaginputcheckin.setAttribute("readonly","readonly"); 
         newtaginputcheckout.setAttribute("readonly","readonly"); 
-        newtaginputguest.setAttribute("readonly","readonly"); 
-        newtaginputroom.setAttribute("readonly","readonly"); 
+        newtaginputguest.setAttribute("disabled","disabled"); 
+        newtaginputroom.setAttribute("disabled","disabled"); 
          
     })
 
