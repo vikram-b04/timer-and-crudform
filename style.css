@@ -14085,6 +14085,11 @@ fieldset:disabled .btn {
 
 
 @media screen and (max-width: 500px) {
+
+    body{
+        overflow: hidden;
+    }
+    
     .map iframe {
         width: 370px;
     }
