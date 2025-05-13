@@ -306,7 +306,7 @@ let minutes = document.getElementById("minutes");
 let seconds = document.getElementById("seconds");
 
 setInterval(() => {
-    let offerend = new Date('may 13 2025 00:00:00');
+    let offerend = new Date('july 13 2025 00:00:00');
 let offerstart = new Date();
 let differnce = offerend - offerstart;
 let d = Math.floor(differnce / 1000/60/60/24);
